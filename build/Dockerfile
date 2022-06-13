@@ -1,5 +1,7 @@
 FROM python:3.9-slim-buster
 
+RUN apt-get update && apt-get install make && apt-get install -y gcc python3-dev
+
 LABEL Name="Python Flask Demo App" Version=1.4.2
 LABEL org.opencontainers.image.source = "https://github.com/benc-uk/python-demoapp"
 
